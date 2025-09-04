@@ -2,7 +2,12 @@
   "permissions": {
     "allow": [
       "Bash(dir assets)",
-      "WebFetch(domain:pupil-speak-65708289.figma.site)"
+      "WebFetch(domain:pupil-speak-65708289.figma.site)",
+      "Read(/C:\\Users\\paull\\OneDrive\\Desktop\\페이지/**)",
+      "Read(/C:\\Users\\paull\\OneDrive\\Desktop\\페이지/**)",
+      "Read(/C:\\Users\\paull\\OneDrive\\Desktop\\페이지\\assets/**)",
+      "Bash(dir:*)",
+      "Read(/C:\\Users\\paull\\OneDrive\\Desktop\\페이지/**)"
     ],
     "deny": [],
     "ask": []

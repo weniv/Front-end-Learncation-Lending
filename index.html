@@ -12,16 +12,13 @@
     <header class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
         <div class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
-                <div class="flex items-center gap-8">
-                    <div class="text-xl font-bold text-blue-600">프론트엔드 런케이션 in Jeju</div>
-                    <nav class="hidden md:flex gap-6">
-                        <a href="#intro" class="hover:text-blue-600 transition">교육소개</a>
-                        <a href="#curriculum" class="hover:text-blue-600 transition">커리큘럼</a>
-                        <a href="#instructors" class="hover:text-blue-600 transition">강사진</a>
-                        <a href="#application" class="hover:text-blue-600 transition">신청하기</a>
-                    </nav>
-                </div>
-                <div class="text-sm text-gray-600 hidden lg:block">모두의연구소 X 제주대학교 X 위니브</div>
+                <div class="text-xl font-bold text-blue-600">프론트엔드 런케이션 <span style="font-family: 'Brush Script MT', 'Lucida Handwriting', 'Comic Sans MS', cursive; color: black; font-weight: normal;">in Jeju</span></div>
+                <nav class="hidden md:flex items-center gap-6">
+                    <a href="#intro" class="hover:text-blue-600 transition">교육소개</a>
+                    <a href="#curriculum" class="hover:text-blue-600 transition">커리큘럼</a>
+                    <a href="#instructors" class="hover:text-blue-600 transition">강사진</a>
+                    <a href="#application" class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-full font-semibold transition transform hover:scale-105">신청하기</a>
+                </nav>
                 <button class="md:hidden menu-btn">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -32,7 +29,7 @@
                 <a href="#intro" class="block py-2 hover:text-blue-600">교육소개</a>
                 <a href="#curriculum" class="block py-2 hover:text-blue-600">커리큘럼</a>
                 <a href="#instructors" class="block py-2 hover:text-blue-600">강사진</a>
-                <a href="#application" class="block py-2 hover:text-blue-600">신청하기</a>
+                <a href="#application" class="block bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-full text-center font-semibold mt-2">신청하기</a>
             </nav>
         </div>
     </header>
@@ -40,7 +37,7 @@
     <!-- Hero Section -->
     <section class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden" style="background-image: url('assets/main_image.png'); background-size: cover; background-position: center;">
         <div class="container mx-auto px-4 z-10 text-center">
-            <div class="hero-content bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl p-8 md:p-12 max-w-4xl mx-auto">
+            <div class="hero-content bg-white/50 backdrop-blur-md rounded-3xl shadow-2xl p-8 md:p-12 max-w-4xl mx-auto">
                 <div class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
                     K-디지털 트레이닝 과정
                 </div>
@@ -120,12 +117,6 @@
                             <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
-                            4개월간 전일 참여 가능자
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
                             비전공자 참여 가능
                         </li>
                         <li class="flex items-center gap-3">
@@ -178,23 +169,17 @@
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center">
-                    <div class="bg-blue-100 rounded-2xl p-8 mb-4 h-48 flex items-center justify-center">
-                        <img src="assets/dormitory.png" alt="제주대학교 기숙사" class="max-h-full object-contain">
-                    </div>
+                    <img src="assets/런케이션/제주대.avif" alt="제주대학교 기숙사" class="w-full h-64 object-cover rounded-2xl shadow-lg mb-4" onerror="this.style.display='none'">
                     <h3 class="text-xl font-bold mb-2">제주대학교 기숙사</h3>
                     <p class="text-gray-600">런케이션 기간 중 무료 숙박 제공</p>
                 </div>
                 <div class="text-center">
-                    <div class="bg-green-100 rounded-2xl p-8 mb-4 h-48 flex items-center justify-center">
-                        <img src="assets/nature.png" alt="제주 자연" class="max-h-full object-contain">
-                    </div>
+                    <img src="assets/런케이션/제주자연.avif" alt="제주 자연" class="w-full h-64 object-cover rounded-2xl shadow-lg mb-4" onerror="this.style.display='none'">
                     <h3 class="text-xl font-bold mb-2">제주 자연과 함께</h3>
                     <p class="text-gray-600">주말 자연 체험 프로그램</p>
                 </div>
                 <div class="text-center">
-                    <div class="bg-purple-100 rounded-2xl p-8 mb-4 h-48 flex items-center justify-center">
-                        <img src="assets/company.png" alt="IT 기업" class="max-h-full object-contain">
-                    </div>
+                    <img src="assets/런케이션/it기업.avif" alt="IT 기업" class="w-full h-64 object-cover rounded-2xl shadow-lg mb-4" onerror="this.style.display='none'">
                     <h3 class="text-xl font-bold mb-2">IT 기업 방문</h3>
                     <p class="text-gray-600">카카오 등 제주 IT기업 견학</p>
                 </div>

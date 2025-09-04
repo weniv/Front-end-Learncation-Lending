@@ -82,17 +82,17 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(section);
     });
     
-    // Add parallax effect to hero section
-    const heroSection = document.querySelector('.hero-section');
-    if (heroSection) {
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const parallax = heroSection.querySelector('.container');
-            if (parallax) {
-                parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
-            }
-        });
-    }
+    // Add parallax effect to hero section - DISABLED
+    // const heroSection = document.querySelector('.hero-section');
+    // if (heroSection) {
+    //     window.addEventListener('scroll', function() {
+    //         const scrolled = window.pageYOffset;
+    //         const parallax = heroSection.querySelector('.container');
+    //         if (parallax) {
+    //             parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
+    //         }
+    //     });
+    // }
     
     // Add hover effect to cards
     const cards = document.querySelectorAll('.hover-card, .bg-white.rounded-2xl');
