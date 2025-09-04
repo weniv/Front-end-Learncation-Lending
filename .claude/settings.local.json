@@ -7,6 +7,8 @@
       "Read(/C:\\Users\\paull\\OneDrive\\Desktop\\페이지/**)",
       "Read(/C:\\Users\\paull\\OneDrive\\Desktop\\페이지\\assets/**)",
       "Bash(dir:*)",
+      "Read(/C:\\Users\\paull\\OneDrive\\Desktop\\페이지/**)",
+      "Read(/C:\\Users\\paull\\OneDrive\\Desktop\\페이지/**)",
       "Read(/C:\\Users\\paull\\OneDrive\\Desktop\\페이지/**)"
     ],
     "deny": [],
