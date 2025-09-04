@@ -129,23 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCountdown();
     setInterval(updateCountdown, 60000);
     
-    // Add typing effect to hero title
-    const heroTitle = document.querySelector('.hero-section h1');
-    if (heroTitle) {
-        const text = heroTitle.textContent;
-        heroTitle.textContent = '';
-        let index = 0;
-        
-        function typeWriter() {
-            if (index < text.length) {
-                heroTitle.textContent += text.charAt(index);
-                index++;
-                setTimeout(typeWriter, 100);
-            }
-        }
-        
-        setTimeout(typeWriter, 500);
-    }
+    // Hero title animation is now handled by CSS
     
     // Add number animation for statistics
     function animateNumber(element, target, duration = 2000) {
