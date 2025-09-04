@@ -1,0 +1,439 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(5deg);
+    }
+    25% {
+        transform: translateY(-20px) rotate(-5deg);
+    }
+    50% {
+        transform: translateY(0) rotate(5deg);
+    }
+    75% {
+        transform: translateY(-10px) rotate(-5deg);
+    }
+}
+
+@keyframes floatReverse {
+    0%, 100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+    25% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+    50% {
+        transform: translateY(0) rotate(-5deg);
+    }
+    75% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Floating Stickers */
+.floating-sticker {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    opacity: 0.6;
+    z-index: 1;
+    pointer-events: none;
+    object-fit: contain;
+}
+
+/* Left side stickers */
+.left-sticker {
+    left: 2%;
+    top: 10%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.sticker-3 {
+    left: 5%;
+    top: 40%;
+    animation: float 7s ease-in-out infinite;
+    animation-delay: 2s;
+    width: 90px;
+    height: 90px;
+}
+
+.sticker-5 {
+    left: 3%;
+    top: 70%;
+    animation: float 8s ease-in-out infinite;
+    animation-delay: 1.5s;
+    width: 85px;
+    height: 85px;
+}
+
+/* Right side stickers */
+.right-sticker {
+    right: 2%;
+    top: 20%;
+    animation: floatReverse 8s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.sticker-4 {
+    right: 5%;
+    top: 50%;
+    animation: floatReverse 6.5s ease-in-out infinite;
+    animation-delay: 0.5s;
+    width: 95px;
+    height: 95px;
+}
+
+.sticker-6 {
+    right: 3%;
+    top: 75%;
+    animation: floatReverse 7.5s ease-in-out infinite;
+    animation-delay: 3s;
+    width: 88px;
+    height: 88px;
+}
+
+/* Desktop only - ensure stickers stay on sides */
+@media (min-width: 1280px) {
+    .left-sticker, .sticker-3, .sticker-5 {
+        left: calc(50% - 650px);
+    }
+    
+    .right-sticker, .sticker-4, .sticker-6 {
+        right: calc(50% - 650px);
+    }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .floating-sticker {
+        width: 70px;
+        height: 70px;
+        opacity: 0.5;
+    }
+    
+    .sticker-3, .sticker-4, .sticker-5, .sticker-6 {
+        width: 65px;
+        height: 65px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .floating-sticker {
+        display: none; /* Hide all stickers on mobile for better readability */
+    }
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+/* Hero Section */
+.hero-section {
+    background-attachment: fixed;
+    position: relative;
+}
+
+.hero-content {
+    animation: slideUp 1s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile adjustments for hero */
+@media (max-width: 768px) {
+    .hero-content {
+        margin: 2rem 1rem;
+        padding: 2rem 1.5rem;
+    }
+    
+    .hero-section {
+        background-attachment: scroll; /* Fix mobile background */
+    }
+}
+
+/* Card Hover Effects */
+.hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Scroll Snap for Mobile */
+@media (max-width: 768px) {
+    .snap-x {
+        scroll-snap-type: x mandatory;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .snap-x > * {
+        scroll-snap-align: start;
+        flex-shrink: 0;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Button Animations */
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-primary:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Loading Animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Backdrop Blur Fallback */
+@supports not (backdrop-filter: blur(10px)) {
+    .backdrop-blur {
+        background-color: rgba(255, 255, 255, 0.95);
+    }
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Focus Styles */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    header,
+    footer,
+    .no-print {
+        display: none;
+    }
+    
+    body {
+        font-size: 12pt;
+    }
+}
+
+/* Smooth Transitions */
+* {
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Section Spacing */
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Patterns */
+.pattern-dots {
+    background-image: radial-gradient(circle, #e5e7eb 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.pattern-grid {
+    background-image: 
+        linear-gradient(rgba(229, 231, 235, 0.5) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(229, 231, 235, 0.5) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* Code Block Styles */
+code {
+    font-family: 'Courier New', Courier, monospace;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Instructor Card Animation */
+.instructor-card {
+    transition: transform 0.3s ease;
+}
+
+.instructor-card:hover {
+    transform: scale(1.05);
+}
+
+/* Timeline Styles */
+.timeline-item {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    background: #3b82f6;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+/* Glassmorphism Effect */
+.glass {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Dark Mode Support (optional) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-primary: #1a1a1a;
+        --text-primary: #ffffff;
+    }
+}
+
+/* Mobile-First Responsive Utilities */
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+}

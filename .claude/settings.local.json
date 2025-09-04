@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir assets)",
+      "WebFetch(domain:pupil-speak-65708289.figma.site)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
