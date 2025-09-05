@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 /* Animations */
@@ -25,7 +25,8 @@ body {
 }
 
 @keyframes float {
-    0%, 100% {
+    0%,
+    100% {
         transform: translateY(0) rotate(5deg);
     }
     25% {
@@ -40,7 +41,8 @@ body {
 }
 
 @keyframes floatReverse {
-    0%, 100% {
+    0%,
+    100% {
         transform: translateY(0) rotate(-5deg);
     }
     25% {
@@ -122,11 +124,15 @@ body {
 
 /* Desktop only - ensure stickers stay on sides */
 @media (min-width: 1280px) {
-    .left-sticker, .sticker-3, .sticker-5 {
+    .left-sticker,
+    .sticker-3,
+    .sticker-5 {
         left: calc(50% - 650px);
     }
-    
-    .right-sticker, .sticker-4, .sticker-6 {
+
+    .right-sticker,
+    .sticker-4,
+    .sticker-6 {
         right: calc(50% - 650px);
     }
 }
@@ -138,8 +144,11 @@ body {
         height: 70px;
         opacity: 0.5;
     }
-    
-    .sticker-3, .sticker-4, .sticker-5, .sticker-6 {
+
+    .sticker-3,
+    .sticker-4,
+    .sticker-5,
+    .sticker-6 {
         width: 65px;
         height: 65px;
     }
@@ -204,7 +213,7 @@ body {
         margin: 2rem 1rem;
         padding: 2rem 1.5rem;
     }
-    
+
     .hero-section {
         background-attachment: scroll; /* Fix mobile background */
     }
@@ -227,7 +236,7 @@ body {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
     }
-    
+
     .snap-x > * {
         scroll-snap-align: start;
         flex-shrink: 0;
@@ -259,8 +268,30 @@ body {
     overflow: hidden;
 }
 
+.btn-normal {
+    background-color: #2e6ff2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-normal:hover {
+    background-color: #1e4fd2;
+}
+
+.btn-wh {
+    background-color: #fff;
+    border: solid 2px #2e6ff2;
+    color: #2e6ff2;
+}
+
+.btn-wh:hover {
+    background-color: #2e6ff2;
+    color: #fff;
+}
+
 .btn-primary::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -287,7 +318,8 @@ body {
 
 /* Loading Animation */
 @keyframes pulse {
-    0%, 100% {
+    0%,
+    100% {
         opacity: 1;
     }
     50% {
@@ -328,7 +360,7 @@ textarea:focus {
     .no-print {
         display: none;
     }
-    
+
     body {
         font-size: 12pt;
     }
@@ -352,15 +384,13 @@ section {
 }
 
 .pattern-grid {
-    background-image: 
-        linear-gradient(rgba(229, 231, 235, 0.5) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(229, 231, 235, 0.5) 1px, transparent 1px);
+    background-image: linear-gradient(rgba(229, 231, 235, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(229, 231, 235, 0.5) 1px, transparent 1px);
     background-size: 20px 20px;
 }
 
 /* Code Block Styles */
 code {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     background: rgba(0, 0, 0, 0.1);
     padding: 2px 6px;
     border-radius: 4px;
@@ -371,11 +401,11 @@ code {
     h1 {
         font-size: 2.5rem;
     }
-    
+
     h2 {
         font-size: 2rem;
     }
-    
+
     h3 {
         font-size: 1.5rem;
     }
@@ -397,7 +427,7 @@ code {
 }
 
 .timeline-item::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 50%;
